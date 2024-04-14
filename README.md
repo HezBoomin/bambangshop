@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. For BambangShop case we still need an interface. Subscriber interface allows for different types of subscribers that can react differently to notifications. This way, when a product is added, deleted, or promoted, we can simply call the notify method on all subscribers of the relevant product type, and each subscriber will handle the notification in its own way.
+
+2. Using DashMap is necessary in this case because it provides a more efficient way to store and retrieve unique values based on their keys. DashMap allows for constant-time lookups and inserts, which is important when dealing with unique identifiers like id in Program and url in Subscriber. Using a Vec (list) would require iterating over the entire list to find a specific value, resulting in a less efficient solution. Therefore, using DashMap is recommended for this scenario.
+
+3. In terms of design patterns, using DashMap is necessary for thread safety. While the Singleton pattern ensures only one instance of a class, it doesn't inherently provide thread safety. Therefore, DashMap is a good choice for achieving thread safety in this case.
 
 #### Reflection Publisher-2
 
