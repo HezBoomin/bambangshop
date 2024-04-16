@@ -22,6 +22,6 @@ impl Subscriber {
             .body(to_string(&payload).unwrap())
             .send().await.ok();
         log::warn_!("Sent {} notification of: [{}] {}, to {}",
-            payload.status, payload.product_type, payload.product_tittle, self.url)
+            payload.status, payload.product_type, payload.product_tittle, self.url);
     }
 }
