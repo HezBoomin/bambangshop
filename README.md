@@ -63,9 +63,9 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [ ✔️] Commit: `Implement subscribe function in Notification controller.`
     -   [✔️ ] Commit: `Implement unsubscribe function in Notification service.`
     -   [✔️ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [ ✔️] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [✔️] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [ ] Commit: `Implement publish function in Program service and Program controller.`
     -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
@@ -86,8 +86,14 @@ This is the place for you to write reflections:
 #### Reflection Publisher-2
 1. MVC pattern doesn't explicitly include Services and Repositories, including them can lead to a more organized, flexible, and maintainable system.
 
-2. 
+2. If we only use model, it will cause the model to be bloated with business logic, making it harder to maintain and test. By separating business logic into services, we can keep the model clean and focused on data representation. Repositories are used to abstract the data layer, allowing for easier testing and swapping of data sources.
 
-3. 
+3. Postman is a useful tool for testing APIs endpoint because it allows for easy creation and execution of HTTP requests. One of my favorite feature in Postman is we can see the response in a pretty format, which makes it easier to read and understand.
 
 #### Reflection Publisher-3
+
+1. We use the push model in this case because we have a function called notify that notfiy the subscribers
+
+2. The advantages of the pull model is that the subscriber can request the notification when they want to, so the subscriber can control when they want to receive the notification. The disadvantages of the pull model is that the subscriber need to request the notification every time they want to receive the notification.
+
+3. if we didn't use the multi-threading in notification process it will cause the notification process to be slow because the notification process will be done sequentially. By using multi-threading, we can do the notification process concurrently, so the notification process will be faster.
