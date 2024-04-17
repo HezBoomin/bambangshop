@@ -17,7 +17,8 @@ impl SubscriberRepository{
 
         SUBSCRIBER.get(product_type).unwrap()
             .insert(subscriber_value.url.clone(), subscriber_value);
-    }   return subscriber;
+        return subscriber;
+    }   
 
     pub fn list_all(product_type: &str) -> Vec<Subscriber> {
         if SUBSCRIBER.get(product_type).is_none() {
